@@ -1,0 +1,45 @@
+﻿@model PersonUpdateRequest
+
+<form class="my_form">
+
+    <input type="hidden" asp-for="PersonID" />
+
+    <div class="my_field">
+        <label asp-for="PersonName">Person name</label>
+        <input asp-for="PersonName" value=@Model.PersonName readonly>
+    </div>
+
+    <div class="my_field">
+        
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" value=@Model.Email readonly>
+    </div>
+
+    <div class="my_field">
+        <label asp-for="DateOfBirth">Date of birth</label>
+        <input type="datetime" asp-for="DateOfBirth" value="@Model.DateOfBirth" readonly>
+    </div >
+
+    <div class="my_field">
+        
+        <label asp-for="Gender">Gender</label>
+        <input asp-for="Gender" value=@Model.Gender readonly>
+    </div>
+
+    <div class="my_field">
+        <label asp-for="Country"> Country</label>
+        <input asp-for="Country" value=@Model.Country readonly>
+    </div>
+
+    <div class="my_field">
+        <label asp-for="ReceiveNewsLetters" class="form-label pt">Receive News Letters</label>
+        <input asp-for="Country" value=@Model.GetReceiveNewsLetters() readonly>
+    </div>
+
+    <div class="my_field">
+         <button asp-controller="Persons" asp-action="Delete" formmethod="post" class="my_button_red">Delete</button>
+        <button asp-controller="Persons" asp-action="Index" class="my_button_green">Cancel</button>
+
+    </div>
+    
+</form>

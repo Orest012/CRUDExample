@@ -1,0 +1,60 @@
+﻿.my_form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.my_field {
+    margin-bottom: 15px;
+}
+
+    .my_field label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .my_field input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        color: #333;
+    }
+
+.my_field select{
+    width: 150px;
+    height: auto;
+}
+    .my_button_red, .my_button_green {
+        border: none;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+.my_button_green {
+    background-color: #008000;
+    color: white;
+    
+}
+
+.my_button_red {
+    background-color: #FF0000;
+    color: white;
+}
+
+.my_button_blue {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+    width: 150px;
+    height: auto;
+}
+

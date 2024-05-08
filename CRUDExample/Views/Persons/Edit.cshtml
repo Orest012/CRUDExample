@@ -1,0 +1,56 @@
+﻿@model PersonUpdateRequest
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h1> Edit person</h1>
+
+<form asp-controller="Persons" asp-action="Edit" method="post" class="my_form">
+    <input type="hidden" asp-for="PersonID" />
+    <div class="my_field">
+        <label asp-for="PersonName" class="form-label pt">Person Name</label>
+        <input asp-for="PersonName" type="text">
+    </div>
+
+    <div class="my_field">
+        <label asp-for="Email" class="form-label pt">Email</label>
+        <input asp-for="Email" type="email">
+    </div>
+
+    <div class="my_field">
+        <label asp-for="DateOfBirth" class="form-label pt">Date of Birth</label>
+        <input asp-for="DateOfBirth" type="text">
+    </div>
+
+    <div class="my_field">
+        <label asp-for="Gender" class="form-label">Gender</label>
+    </div>
+    <div class="my_field">
+        <select asp-for="Gender">
+            <option value="Man">Man</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+    </div>
+
+    <div class="my_field">
+        <label asp-for="Country" class="form-label pt">Country</label>
+        <input asp-for="Country" type="text">
+    </div> 
+
+    <div class="my_field">
+        <label asp-for="Address" class="form-label pt">Address</label>
+        <textarea asp-for="Address" type="text"></textarea>
+    </div>
+
+    <div>
+        <label asp-for="ReceiveNewsLetters" class="form-label pt"><strong>Receive News Letters</strong></label>
+        <input type="checkbox" asp-for="ReceiveNewsLetters" value="true" />
+    </div>
+
+    <div>
+        <button class="my_button_blue" asp-action="Edit" , asp-controller="Persons">Edit</button>
+    </div>
+
+</form>
